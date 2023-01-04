@@ -1,0 +1,20 @@
+<mat-toolbar  class="toolbar">
+  <button class="toggle-side" [ngClass]="color"  (mouseover)="color='font-primary'" (mouseout)="color='font-black'">
+    <fa-icon [icon]="addressCard" (click)="toggle()"></fa-icon>
+  </button>
+  <nav class="nav-container">
+    <ul class="nav-list font-black">
+      <li class="nav-link" routerLink="/about">SOBRE MI</li>
+      <li class="nav-link" routerLink="/projects">PROYECTOS </li>
+      <li class="nav-link" routerLink="/skills">SKILLS</li>
+      <li class="nav-link" routerLink="/contact">CONTACTO </li>
+    </ul>
+  </nav>
+  <div class="language font-black">
+    <label for="selectLanguage"><fa-icon [icon]="world"></fa-icon></label>
+      <select id="selectLanguage" name="selectLanguage" class="font-black" [(ngModel)]="languageSelected">
+        <option value="es-AR">ES</option>
+        <option value="en-US">EN</option>
+      </select>
+  </div>
+</mat-toolbar>
