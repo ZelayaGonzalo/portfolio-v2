@@ -1,17 +1,13 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="toolbar">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="Toolbar">Ttile</h1>
-  </mat-toolbar>
+  <app-nav-bar (toggleSideBar)="snav.toggle()"></app-nav-bar>
   <mat-sidenav-container class="sidenav-container"
                          [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav class="sidenav bg-primary" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+    <mat-sidenav class="sidenav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="40">
       <app-side-bar></app-side-bar>
     </mat-sidenav>
-
     <mat-sidenav-content>
-      <p *ngFor="let content of fillerContent">{{content}}</p>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

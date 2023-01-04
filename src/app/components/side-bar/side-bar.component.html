@@ -1,7 +1,18 @@
-<nav class="sidenav-container">
-  <div class="profile">
+<nav class="sidenav-container font-black">
+
+  <div class="profile font-black">
     <img src="" class="img-profile">
-    <p class="name font-white">Gonzalo Zelaya</p>
-    <p class="ocupation font-white">Full Stack Developer</p>
+    <p class="name ">Gonzalo Zelaya</p>
+    <p class="ocupation">Full Stack Developer</p>
   </div>
+
+  <ul class="list-data">
+    <li *ngFor="let item of listItems" class="single-item font-black" [ngClass]="item.color"  (mouseover)="item.color='bg-primary'" (mouseout)="item.color='bg-white'">
+      <fa-icon [icon]="item.icon" class="item-icon"></fa-icon>
+      <p matListItemLine>
+        {{item.text}}
+      </p>
+    </li>
+  </ul>
+
 </nav>

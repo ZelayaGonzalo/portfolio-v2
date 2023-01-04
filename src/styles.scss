@@ -7,7 +7,16 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat.core();
+// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
+//  The following line adds:
+//    1. Default typography styles for all components
+//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
+//  If you specify typography styles for the components you use elsewhere, you should delete this line.
+//  If you don't need the default component typographies but still want the hierarchy styles,
+//  you can delete this line and instead use:
+//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
+@include mat.all-legacy-component-typographies();
+@include mat.legacy-core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -32,11 +41,27 @@ $portfolio-v2-theme: mat.define-light-theme((
 ));
 
 $primary:map-get($portfolio-v2-primary,A700);
+$primary-dark:map-get($portfolio-v2-primary, 900 );
+$primary-light:map-get($portfolio-v2-primary, A400 );
+
+.bg-white{
+  background-color: #f5f5f5;
+}
 .bg-primary{
   background-color: $primary !important;
+  color: #f5f5f5 !important;
+}
+.bg-primary-dark{
+  background-color: $primary-dark;
+}
+.bg-primary-light{
+  background-color: $primary-light;
 }
 .font-black{
-  color: $black-font;
+  color: $black-font !important;
+}
+.font-primary{
+  color: $primary;
 }
 .font-white{
   color: $white;
@@ -46,9 +71,13 @@ $primary:map-get($portfolio-v2-primary,A700);
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($portfolio-v2-theme);
+@include mat.all-legacy-component-themes($portfolio-v2-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.page-container{
+  min-height: calc(100vh - 50px);
+}
