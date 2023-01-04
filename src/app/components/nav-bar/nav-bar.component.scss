@@ -8,15 +8,44 @@
     background-color: transparent;
     font-size: 30px;
     cursor: pointer;
+    transition: 0.2s;
   }
   .nav-list{
     display: flex;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     padding: 0 10px;
     li{
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
       margin: 0 5px;
       list-style: none;
+      padding: 10px 0;
+      p{
+        margin: 0;
+      }
+      .bar-selected{
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 7px;
+        width: 100%;
+        border-radius: 8px;
+        animation: grow 0.2s ease-in-out;
+      }
+      &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+    .active-link{
+      font-weight: bold;
+      .bar-selected{
+        display: block;
+      }
     }
   }
   .language{
@@ -35,4 +64,14 @@
     }
   }
 
+}
+
+
+@keyframes grow {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
 }

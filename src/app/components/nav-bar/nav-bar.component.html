@@ -1,20 +1,46 @@
-<mat-toolbar  class="toolbar">
-  <button class="toggle-side" [ngClass]="color"  (mouseover)="color='font-primary'" (mouseout)="color='font-black'">
+<mat-toolbar class="toolbar">
+  <button
+    class="toggle-side"
+    [ngClass]="color"
+    (mouseover)="color = 'font-primary'"
+    (mouseout)="color = 'font-black'"
+  >
     <fa-icon [icon]="addressCard" (click)="toggle()"></fa-icon>
   </button>
   <nav class="nav-container">
     <ul class="nav-list font-black">
-      <li class="nav-link" routerLink="/about">SOBRE MI</li>
-      <li class="nav-link" routerLink="/projects">PROYECTOS </li>
-      <li class="nav-link" routerLink="/skills">SKILLS</li>
-      <li class="nav-link" routerLink="/contact">CONTACTO </li>
+      <li class="nav-link" routerLink="/about" routerLinkActive="active-link">
+        <p>SOBRE MI</p>
+        <div class="bar-selected bg-primary"></div>
+      </li>
+      <li
+        class="nav-link"
+        routerLink="/projects"
+        routerLinkActive="active-link"
+      >
+        <p>PROYECTOS</p>
+        <div class="bar-selected bg-primary"></div>
+      </li>
+      <li class="nav-link" routerLink="/skills" routerLinkActive="active-link">
+        <p>SKILLS</p>
+        <div class="bar-selected bg-primary"></div>
+      </li>
+      <li class="nav-link" routerLink="/contact" routerLinkActive="active-link">
+        <p>CONTACTO</p>
+        <div class="bar-selected bg-primary"></div>
+      </li>
     </ul>
   </nav>
   <div class="language font-black">
     <label for="selectLanguage"><fa-icon [icon]="world"></fa-icon></label>
-      <select id="selectLanguage" name="selectLanguage" class="font-black" [(ngModel)]="languageSelected">
-        <option value="es-AR">ES</option>
-        <option value="en-US">EN</option>
-      </select>
+    <select
+      id="selectLanguage"
+      name="selectLanguage"
+      class="font-black"
+      [(ngModel)]="languageSelected"
+    >
+      <option value="es-AR">ES</option>
+      <option value="en-US">EN</option>
+    </select>
   </div>
 </mat-toolbar>
