@@ -1,3 +1,26 @@
-<section class="page-container">
+<section class="page-container bg-white">
+  <div class="description font-black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit id velit vitae pharetra. Pellentesque volutpat velit rutrum orci varius, id volutpat massa suscipit. Curabitur ultricies arcu ac consectetur vestibulum. In justo ipsum, commodo eu rutrum eget, aliquam nec est. Sed laoreet, justo nec finibus ornare, nisl leo blandit sapien, a maximus dui massa id lorem. Etiam aliquam dignissim magna, nec volutpat tortor. Cras luctus sapien eget metus tincidunt convallis. Integer hendrerit tellus diam, ut consectetur arcu laoreet quis.
+  </div>
+  <div class="button-options">
+    <button>
+      <fa-icon class="icon font-primary" [icon]="diagramIcon"></fa-icon>
+      <p class="font-black">VER PROYECTOS</p>
+    </button>
+    <button>
+      <fa-icon class="icon font-primary" [icon]="cubesIcon"></fa-icon>
+      <p class="font-black">VER SKILLS</p>
+    </button>
+    <button>
+      <fa-icon class="icon font-primary" [icon]="downloadIcon"></fa-icon>
+      <p class="font-black">DESCARGAR CV</p>
+    </button>
+  </div>
+  <div class="experience font-black">
+    <h3 class="sub-title">Experiencia Academica</h3>
+    <div class="exp-list">
+      <app-academic-item *ngFor="let item of academicItems" [data]="item"></app-academic-item>
+    </div>
 
+  </div>
 </section>

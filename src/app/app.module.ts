@@ -13,6 +13,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { AcademicItemComponent } from './pages/about/academic-item/academic-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     ProjectsComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
+    AcademicItemComponent
   ],
   imports: [
     BrowserModule,

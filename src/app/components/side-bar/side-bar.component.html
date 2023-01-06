@@ -8,11 +8,12 @@
 
   <ul class="list-data">
     <li *ngFor="let item of listItems" class="single-item font-black" [ngClass]="item.color"  (mouseover)="item.color='bg-primary'" (mouseout)="item.color='bg-white'">
-      <fa-icon [icon]="item.icon" class="item-icon"></fa-icon>
+      <fa-icon [icon]="item.icon" class="item-icon" [ngClass]="item.color != 'bg-primary' ?'font-primary':'font-white'"></fa-icon>
       <p matListItemLine>
         {{item.text}}
       </p>
     </li>
   </ul>
+
 
 </nav>

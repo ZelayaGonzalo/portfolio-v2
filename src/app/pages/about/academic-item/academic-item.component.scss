@@ -1,0 +1,33 @@
+.item-container{
+  margin: 20px 0;
+  display: flex;
+  width: 90%;
+  min-width: 600px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  transition: 0.2s;
+  .side{
+    display: flex;
+    flex-direction: column;
+    p{
+      margin: 0;
+      margin-top: 10px;
+    }
+    h4{
+      margin: 0;
+      font-weight: bold;
+    }
+    .icon{
+      cursor: pointer;
+      font-size: 16px;
+      align-self: flex-end;
+    }
+  }
+  &:hover{
+    transform: scale(1.1);
+  }
+}
