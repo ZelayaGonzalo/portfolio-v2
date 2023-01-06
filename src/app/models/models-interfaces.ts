@@ -5,3 +5,9 @@ export interface AcademicItem{
   from:number,
   to:number
 }
+
+export interface Skill{
+  name:String,
+  image:String,
+  type:String
+}
