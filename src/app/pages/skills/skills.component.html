@@ -1,1 +1,31 @@
-<p>skills works!</p>
+<section class="page-container bg-white">
+  <h2 class="title font-black"><fa-icon [icon]="frameworkIcon" class="font-primary"></fa-icon> FRAMEWORKS</h2>
+  <div class="icons-list">
+    <div *ngFor="let item of frameworks" class="icon-container">
+      <div class="icon float">
+        <img [src]="'../../../assets/images/icons/'+item.image">
+      </div>
+      <p class="name font-black">{{item.name}}</p>
+    </div>
+  </div>
+
+  <h2 class="title font-black"><fa-icon [icon]="languageIcon" class="font-primary"></fa-icon> LENGUAJES</h2>
+  <div class="icons-list">
+    <div *ngFor="let item of languages" class="icon-container">
+      <div class="icon float">
+        <img [src]="'../../../assets/images/icons/'+item.image">
+      </div>
+      <p class="name font-black">{{item.name}}</p>
+    </div>
+  </div>
+
+  <h2 class="title font-black"><fa-icon [icon]="toolsIcon" class="font-primary"></fa-icon> HERRAMIENTAS</h2>
+  <div class="icons-list">
+    <div *ngFor="let item of tools" class="icon-container">
+      <div class="icon float">
+        <img [src]="'../../../assets/images/icons/'+item.image">
+      </div>
+      <p class="name font-black">{{item.name}}</p>
+    </div>
+  </div>
+</section>
