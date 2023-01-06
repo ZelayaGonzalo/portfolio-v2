@@ -1,0 +1,12 @@
+<div class="item-container">
+  <div class="side">
+    <h4> {{data.title}}</h4>
+    <p>{{data.place}}</p>
+  </div>
+  <div class="side">
+    <ng-container *ngIf="data.link != 'none'">
+      <a class="icon" [href]="data.link" target="_blank"><fa-icon class="font-primary" [icon]="linkIcon"></fa-icon></a>
+    </ng-container>
+    <p>{{data.from}} - {{data.to !== 0 ? data.to:'Current'}}</p>
+  </div>
+</div>
