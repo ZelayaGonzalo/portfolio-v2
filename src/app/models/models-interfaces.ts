@@ -11,3 +11,9 @@ export interface Skill{
   image:String,
   type:String
 }
+
+export interface Contact{
+  logo:String,
+  link:String,
+  direction:String
+}
