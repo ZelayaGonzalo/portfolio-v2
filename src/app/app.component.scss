@@ -22,3 +22,11 @@
   left: 0;
   right: 0;
 }
+
+@media (max-width:700px){
+  .sidenav{
+    overflow: hidden;
+    width: 250px;
+    box-shadow: none;
+  }
+}
