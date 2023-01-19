@@ -1,19 +1,28 @@
 export interface AcademicItem{
-  title:String,
-  place:String,
-  link:String,
+  title:string,
+  place:string,
+  link:string,
   from:number,
   to:number
 }
 
 export interface Skill{
-  name:String,
-  image:String,
-  type:String
+  name:string,
+  image:string,
+  type:string
 }
 
 export interface Contact{
-  logo:String,
-  link:String,
-  direction:String
+  logo:string,
+  link:string,
+  direction:string
+}
+
+export interface Project{
+  title:string,
+  description:string,
+  images:string[],
+  stack:Skill[],
+  demoLink:string,
+  repoLink:string
 }

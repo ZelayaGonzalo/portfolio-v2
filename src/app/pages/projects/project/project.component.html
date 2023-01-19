@@ -1,0 +1,24 @@
+<div class="project-container float">
+  <h2 class="title">{{project.title}}</h2>
+  <div class="project">
+    <div class="images">
+      <gallery [gallerize]="project.title" [id]="project.title" [items]="images" [counter]="false" [autoPlay]="true" [playerInterval]="5000" [imageSize]="'contain'" [thumb]="false"  class="gallery"></gallery>
+    </div>
+    <div class="info">
+      <ul class="stack">
+        <li *ngFor="let skill of project.stack" class="skill">
+          <img [alt]="skill.name" [title]="skill.name" [src]="'../../../../assets/images/icons/'+skill.image">
+        </li>
+      </ul>
+      <div class="description">
+        {{project.description}}
+      </div>
+      <div class="links">
+        <ng-container *ngIf="project.repoLink != 'none'">
+          <a [href]="project.demoLink" target="_blank"><button class="float bg-primary">Demo</button></a>
+        </ng-container>
+         <a [href]="project.repoLink" target="_blank"> <button class="float">Repo</button></a>
+      </div>
+    </div>
+  </div>
+</div>
