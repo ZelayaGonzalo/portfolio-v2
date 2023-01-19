@@ -44,5 +44,12 @@ export class AboutComponent {
       from:2021,
       to:0
     },
+    {
+      title:'Bachillerato en Administración de Empresa',
+      place:'Dr. Miguel Ragone 5137',
+      link:'none',
+      from:2012,
+      to:2017
+    },
   ]
 }

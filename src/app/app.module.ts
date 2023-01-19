@@ -14,7 +14,9 @@ import { SkillsComponent } from './pages/skills/skills.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { AcademicItemComponent } from './pages/about/academic-item/academic-item.component';
-
+import { ProjectComponent } from './pages/projects/project/project.component';
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from  'ng-gallery/lightbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { AcademicItemComponent } from './pages/about/academic-item/academic-item
     ProjectsComponent,
     SkillsComponent,
     ContactComponent,
-    AcademicItemComponent
+    AcademicItemComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ import { AcademicItemComponent } from './pages/about/academic-item/academic-item
     BrowserAnimationsModule,
     MaterialModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    GalleryModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
