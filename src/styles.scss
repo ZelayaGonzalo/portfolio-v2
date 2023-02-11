@@ -87,7 +87,10 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #f5f5f5;
 }
-
+ul,ol,li{
+  list-style: none;
+  padding: 0;
+}
 
 .page-container{
   min-height: calc(100vh - 115px);
@@ -98,3 +101,8 @@ body {
   margin-right: auto;
 }
 
+@media (max-width:800px){
+  .page-container{
+    width: 90vw;
+  }
+}

@@ -1,5 +1,6 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,6 @@ import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 })
 export class AppComponent implements OnDestroy{
   title = 'portfolio-v2';
-
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
   fillerContent = Array.from(
@@ -26,11 +26,20 @@ export class AppComponent implements OnDestroy{
   private _mobileQueryListener: () => void;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = media.matchMedia('(max-width: 1000px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
+
+  checkIfOpen(otherNav:MatSidenav,navToUse:MatSidenav){
+    navToUse.toggle()
+    if(otherNav.opened){
+      otherNav.close()
+    }
+
+  }
+
 }

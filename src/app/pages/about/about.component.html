@@ -1,20 +1,26 @@
 <section class="page-container bg-white">
   <div class="description font-black">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit id velit vitae pharetra. Pellentesque volutpat velit rutrum orci varius, id volutpat massa suscipit. Curabitur ultricies arcu ac consectetur vestibulum. In justo ipsum, commodo eu rutrum eget, aliquam nec est. Sed laoreet, justo nec finibus ornare, nisl leo blandit sapien, a maximus dui massa id lorem. Etiam aliquam dignissim magna, nec volutpat tortor. Cras luctus sapien eget metus tincidunt convallis. Integer hendrerit tellus diam, ut consectetur arcu laoreet quis.
+    👋 Hola, me llamo Gonzalo Zelaya y te doy la bienvenida a mi sitio personal.<br><br>He estado estudiando programación por los últimos 3 años y he trabajado en muchos proyectos personales en el transcurso de ese tiempo,de los cuales puedes ver algunos en la sección PROYECTOS.<br>Actualmente me gustaria entrar en el mundo profesional y seguir desarrollando mis conocimientos.<br>Gracias por tu interés.
   </div>
   <div class="button-options">
-    <button>
-      <fa-icon class="icon font-primary" [icon]="diagramIcon"></fa-icon>
-      <p class="font-black">VER PROYECTOS</p>
-    </button>
-    <button>
-      <fa-icon class="icon font-primary" [icon]="cubesIcon"></fa-icon>
-      <p class="font-black">VER SKILLS</p>
-    </button>
-    <button>
-      <fa-icon class="icon font-primary" [icon]="downloadIcon"></fa-icon>
-      <p class="font-black">DESCARGAR CV</p>
-    </button>
+    <a routerLink="/projects">
+      <button>
+        <fa-icon class="icon font-primary" [icon]="diagramIcon"></fa-icon>
+        <p class="font-black">VER PROYECTOS</p>
+      </button>
+    </a>
+    <a routerLink="/skills">
+      <button>
+        <fa-icon class="icon font-primary" [icon]="cubesIcon"></fa-icon>
+        <p class="font-black">VER SKILLS</p>
+      </button>
+    </a>
+    <a href="https://drive.google.com/file/d/1jZwYgaIFEQlLsm270DExnB5H-vBkIuRu/view?usp=sharing" target="_blank">
+      <button>
+        <fa-icon class="icon font-primary" [icon]="downloadIcon"></fa-icon>
+        <p class="font-black">VER CV</p>
+      </button>
+    </a>
   </div>
   <div class="experience font-black">
     <h3 class="sub-title">Experiencia Academica</h3>

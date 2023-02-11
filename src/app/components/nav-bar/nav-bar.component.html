@@ -31,8 +31,11 @@
       </li>
     </ul>
   </nav>
+  <button class="toggle-side toggle-right font-black">
+    <fa-icon [icon]="menu" (click)="toggleNavigation()"></fa-icon>
+  </button>
   <div class="language font-black">
-    <label for="selectLanguage"><fa-icon [icon]="world"></fa-icon></label>
+   <!-- <label for="selectLanguage"><fa-icon [icon]="world"></fa-icon></label>
     <select
       id="selectLanguage"
       name="selectLanguage"
@@ -41,6 +44,6 @@
     >
       <option value="es-AR">ES</option>
       <option value="en-US">EN</option>
-    </select>
+    </select>-->
   </div>
 </mat-toolbar>
