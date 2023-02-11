@@ -57,10 +57,23 @@
     }
   }
 }
-
-mat-carousel{
-  *{
-    background-size: contain;
+@media(max-width: 800px){
+  .project-container{
+    padding: 10px;
+    .stack{
+      padding: 0;
+    }
+    .project{
+      flex-direction: column;
+      align-items: center;
+      .images{
+        padding: 0;
+        .gallery{
+          width: 80vw;
+          height: 200px;
+        }
+      }
+    }
   }
 }
 

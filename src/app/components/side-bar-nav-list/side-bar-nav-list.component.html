@@ -1,0 +1,26 @@
+<nav class="sidenav-container font-black">
+
+<ul class="list-data">
+  <li *ngFor="let item of navigationRoutes">
+    <a [routerLink]="item.route" routerLinkActive="bg-primary font-white" class="single-item font-black" (click)="onPickLink()">
+      <p matListItemLine>
+        {{item.text}}
+      </p>
+    </a>
+  </li>
+</ul>
+
+<!--<div class="language font-black">
+  <label for="selectLanguage"><fa-icon [icon]="world"></fa-icon></label>
+  <select
+    id="selectLanguage"
+    name="selectLanguage"
+    class="font-black"
+    [(ngModel)]="languageSelected"
+  >
+    <option value="es-AR">ES</option>
+    <option value="en-US">EN</option>
+  </select>
+</div>-->
+
+</nav>

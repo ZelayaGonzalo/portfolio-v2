@@ -3,6 +3,7 @@
   display: flex;
   width: 90%;
   min-width: 600px;
+  max-width: 1000px;
   justify-content: space-between;
   padding: 10px 20px;
   border-radius: 10px;
@@ -29,5 +30,11 @@
   }
   &:hover{
     transform: scale(1.05);
+  }
+}
+
+@media(max-width:800px){
+  .item-container{
+    min-width: 200px;
   }
 }

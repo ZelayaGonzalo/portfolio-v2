@@ -1,10 +1,14 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <app-nav-bar (toggleSideBar)="snav.toggle()"></app-nav-bar>
+  <app-nav-bar (toggleSideBar)="checkIfOpen(snav2,snav)" (toggleNav)="checkIfOpen(snav,snav2)"></app-nav-bar>
   <mat-sidenav-container class="sidenav-container"
                          [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
     <mat-sidenav class="sidenav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <app-side-bar></app-side-bar>
+    </mat-sidenav>
+    <mat-sidenav class="sidenav" #snav2 [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" position="end">
+      <app-side-bar-nav-list (selected)="checkIfOpen(snav,snav2)"></app-side-bar-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="bg-white">
       <router-outlet></router-outlet>

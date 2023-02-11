@@ -17,6 +17,7 @@ import { AcademicItemComponent } from './pages/about/academic-item/academic-item
 import { ProjectComponent } from './pages/projects/project/project.component';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
+import { SideBarNavListComponent } from './components/side-bar-nav-list/side-bar-nav-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { LightboxModule } from  'ng-gallery/lightbox';
     SkillsComponent,
     ContactComponent,
     AcademicItemComponent,
-    ProjectComponent
+    ProjectComponent,
+    SideBarNavListComponent
   ],
   imports: [
     BrowserModule,

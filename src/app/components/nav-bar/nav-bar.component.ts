@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { faAddressCard, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faBars, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,15 +8,19 @@ import { faAddressCard, faGlobe } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavBarComponent {
   @Output() toggleSideBar:EventEmitter<boolean> = new EventEmitter<boolean>
+  @Output() toggleNav:EventEmitter<boolean> = new EventEmitter<boolean>
 
   color:String = 'font-black'
   languageSelected:string = 'es-AR'
 
   addressCard = faAddressCard
   world = faGlobe
-
+  menu = faBars
   toggle(){
     this.toggleSideBar.emit(true)
+  }
+  toggleNavigation(){
+    this.toggleNav.emit(true)
   }
 
 }
