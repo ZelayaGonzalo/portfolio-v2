@@ -7,12 +7,14 @@
   </div>
 
   <ul class="list-data">
-    <li *ngFor="let item of listItems" class="single-item font-black" [ngClass]="item.color"  (mouseover)="item.color='bg-primary'" (mouseout)="item.color='bg-white'">
-      <fa-icon [icon]="item.icon" class="item-icon" [ngClass]="item.color != 'bg-primary' ?'font-primary':'font-white'"></fa-icon>
-      <p matListItemLine>
-        {{item.text}}
-      </p>
-    </li>
+    <a *ngFor="let item of listItems" [href]="item.to" target="_blank" style="text-decoration: none;">
+      <li  class="single-item font-black" [ngClass]="item.color"  (mouseover)="item.color='bg-primary'" (mouseout)="item.color='bg-white'">
+        <fa-icon [icon]="item.icon" class="item-icon" [ngClass]="item.color != 'bg-primary' ?'font-primary':'font-white'"></fa-icon>
+        <p matListItemLine>
+          {{item.text}}
+        </p>
+      </li>
+   </a>
   </ul>
 
 

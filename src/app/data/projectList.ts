@@ -56,5 +56,23 @@ export const projects:Project[] = [
     demoLink:'none',
     repoLink:'https://github.com/ZelayaGonzalo/project-sekai-characters',
   },
+  {
+    title:'Alkybank',
+    description:'Alkemy Skill-Up donde trabajamos con un grupo de desarroladores para realizar una E-Wallet app con la API proveida.',
+    images:['https://i.ibb.co/mBVPJVT/Screenshot-2023-02-13-at-09-29-07-e-wallet.png',
+    'https://i.ibb.co/g9BPnjF/Screenshot-2023-02-13-at-09-28-38-e-wallet.png',
+    'https://i.ibb.co/jvKLXjj/Screenshot-2023-02-13-at-09-27-59-e-wallet.png',
+    'https://i.ibb.co/P1Pn1wK/Screenshot-2023-02-13-at-09-27-39-e-wallet.png',
+    'https://i.ibb.co/xYB30RN/Screenshot-2023-02-13-at-09-27-12-e-wallet.png'],
+    stack:[
+      {name:'Angular', image:'angular.svg',type:'Framework'},
+      {name:'Figma', image:'figma.svg',type:'Tool'}
+    ],
+    demoLink:'none',
+    repoLink:'https://github.com/andimolina4/Skill-Up-Angular',
+  },
 ]
 
+/*
+
+*/
