@@ -15,8 +15,9 @@ export class ContactComponent {
     },
     {
       logo:'WhatsApp.svg',
-      link:'contact',
-      direction:'387222159112'
-    }
+      link:'https://wa.me/3873041495',
+      direction:'3873 04-1495'
+    },
+
   ]
 }

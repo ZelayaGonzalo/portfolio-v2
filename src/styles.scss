@@ -58,6 +58,9 @@ $primary-light:map-get($portfolio-v2-primary, A400 );
 .bg-primary-light{
   background-color: $primary-light;
 }
+.bg-black{
+  background-color: $black-font;
+}
 .font-black{
   color: $black-font ;
 }

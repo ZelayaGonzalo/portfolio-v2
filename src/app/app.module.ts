@@ -18,6 +18,7 @@ import { ProjectComponent } from './pages/projects/project/project.component';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
 import { SideBarNavListComponent } from './components/side-bar-nav-list/side-bar-nav-list.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { SideBarNavListComponent } from './components/side-bar-nav-list/side-bar
     ContactComponent,
     AcademicItemComponent,
     ProjectComponent,
-    SideBarNavListComponent
+    SideBarNavListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
