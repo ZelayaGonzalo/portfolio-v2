@@ -16,9 +16,6 @@ export class NavBarComponent {
   addressCard = faAddressCard
   world = faGlobe
   menu = faBars
-  toggle(){
-    this.toggleSideBar.emit(true)
-  }
   toggleNavigation(){
     this.toggleNav.emit(true)
   }

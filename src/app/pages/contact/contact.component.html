@@ -1,15 +1,21 @@
 <section class="page-container bg-white">
-  <h4 class="font-black">
-    Contactame a traves de los siguientes métodos:
-  </h4>
-  <div class="contact-list">
-    <div *ngFor="let item of contacts" class="contact">
-      <a [href]="item.link">
-        <div class="float logo" title="Enviar Email">
-          <img [src]="'../../../assets/images/icons/'+item.logo">
-        </div>
-      </a>
-      <p class="direction font-black">{{item.direction}}</p>
+  <h1 class="title font-black">
+    Información de contacto:
+  </h1>
+  <div class="info">
+    <div class="contact-list">
+      <div *ngFor="let item of contacts" class="contact float">
+        <a [href]="item.direction" >
+          <div class="logo" >
+            <fa-icon class="icon" [ngClass]="item.color" [icon]="item.icon"></fa-icon>
+          </div> 
+        </a>
+        <p class="direction font-black">{{item.link}}</p>
+        <ng-container *ngIf="item.direction != 'none'">
+          <a [href]="item.direction" target="_blank" class="link font-black">Ir</a>
+        </ng-container>
+        
+      </div>
     </div>
   </div>
 </section>
