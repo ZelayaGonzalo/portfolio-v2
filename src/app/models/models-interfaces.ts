@@ -13,9 +13,10 @@ export interface Skill{
 }
 
 export interface Contact{
-  logo:string,
+  icon:any,
   link:string,
-  direction:string
+  direction:string,
+  color:string
 }
 
 export interface Project{

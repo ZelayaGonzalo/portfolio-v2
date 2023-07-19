@@ -29,6 +29,11 @@ export class SkillsComponent {
     {name:'NodeJS',
     image:'node.svg',
     type:'Framework'
+    },
+    {
+      name:'Django',
+      image:'django.svg',
+      type:'Framework'
     }
   ]
   languages:Skill[] = [
@@ -44,6 +49,11 @@ export class SkillsComponent {
     image:'java.svg',
     type:'Language'
     },
+    {
+      name:'Phyton',
+      image:'python.svg',
+      type:'Language'
+    }
   ]
   tools:Skill[] = [
     {name:'Figma',

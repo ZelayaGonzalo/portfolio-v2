@@ -14,7 +14,7 @@
         {{project.description}}
       </div>
       <div class="links">
-        <ng-container *ngIf="project.repoLink != 'none'">
+        <ng-container *ngIf="project.demoLink != 'none'">
           <a [href]="project.demoLink" target="_blank"><button class="float bg-primary">Demo</button></a>
         </ng-container>
          <a [href]="project.repoLink" target="_blank"> <button class="float">Repo</button></a>
