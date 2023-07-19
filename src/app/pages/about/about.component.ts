@@ -17,6 +17,13 @@ export class AboutComponent {
 
   academicItems:AcademicItem[]=[
     {
+      title:'Bootcamp Python con Django',
+      place:'Alkemy',
+      link:'https://drive.google.com/file/d/1vIa9YdvKlDFVU1pM51h1u-BUCd95tOfQ/view?usp=sharing',
+      from:2023,
+      to:2023
+    },
+    {
       title:'Full Stack Developer Jr',
       place:'Argentina Programa',
       link:'https://drive.google.com/file/d/1tt2gKXYQVJXct2bgRIo58DfWNehZBqzm/view?usp=sharing',

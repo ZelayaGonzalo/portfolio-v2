@@ -2,16 +2,6 @@ import { Project, Skill } from "src/app/models/models-interfaces";
 
 export const projects:Project[] = [
   {
-    title:'React Weather App',
-    description:'App de clima hecha con React. Mi primer proyecto y primera vez utilizando una API externa.Su uso es bastante simple, solo escribe la ciudad en el buscador y presiona buscar.',
-    images:['https://i.ibb.co/X7c3tBd/weather-mobile-1.jpg','https://i.ibb.co/HDxQGh4/weather-desktop.jpg'],
-    stack:[
-      {name:'React', image:'react.svg',type:'Framework'}
-    ],
-    demoLink:'https://zelayagonzalo.github.io/react-weather-app/',
-    repoLink:'https://github.com/ZelayaGonzalo/react-weather-app'
-  },
-  {
     title:'Priconne Tierlist',
     description:'Tierlist hecha para la comunidad de un juego. Tiene sorting, filtros y busqueda en tiempo real',
     images:['https://drive.google.com/uc?id=1hkWgSeKOMhgr1gJ9QEM5Nw00vyGX9vBx','https://drive.google.com/uc?id=1-_gN_H0CcQerzexaPR8CGMwj3SuKVWb1','https://drive.google.com/uc?id=1Ttfv3ddcvk2q_GDEgTSbjCx-0RPXiCjt','https://drive.google.com/uc?id=1OpF7glKV79qB29ncwhSLgfaeipeS9bwO'],
